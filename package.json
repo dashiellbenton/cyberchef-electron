@@ -15,6 +15,7 @@
     "dist": "electron-builder --publish never"
   },
   "build": {
+    "publish": "never"
     "appId": "com.dbenton.cyberchef-electron",
     "productName": "CyberChef Electron",
     "copyright": "Copyright © 2025 Dashiell Benton",
