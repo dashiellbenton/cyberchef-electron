@@ -1,4 +1,4 @@
-name: Build and Package Electron App
+name: Build CyberChef
 
 on:
   push:
@@ -8,11 +8,8 @@ on:
     types: [created]
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+  build-macos:
+    runs-on: macos-latest
 
     steps:
     - name: Checkout repository
@@ -26,11 +23,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build for ${{ matrix.os }}
+    - name: Build for macOS
       run: npm run build
 
-    - name: Upload artifact
+    - name: Upload macOS build
       uses: actions/upload-artifact@v4
       with:
-        name: build-${{ matrix.os }}
+        name: build-macos
         path: dist/
