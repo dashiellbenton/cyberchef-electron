@@ -6,7 +6,10 @@
     "CyberChef"
   ],
   "license": "ISC",
-  "author": "Dashiell Benton",
+  "author": {
+    "name": "Dashiell Benton",
+    "email": "dashiellbenton@gmail.com"
+  },
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
@@ -34,7 +37,8 @@
         "AppImage",
         "deb"
       ],
-      "icon": "assets/icon.png"
+      "icon": "assets/icon.png",
+      "maintainer": "Dashiell Benton <dashiellbenton@gmail.com>"
     },
     "mac": {
       "target": "dmg",
