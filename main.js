@@ -15,7 +15,7 @@ app.whenReady().then(() => {
   mainWindow.setMenuBarVisibility(false);
 
 
-  mainWindow.loadFile(path.join(__dirname, 'CyberChef_v10.19.4.html'));
+  mainWindow.loadFile(path.join(__dirname, 'CyberChef.html'));
 
   app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
